@@ -32,9 +32,22 @@ void Obliczanie_objetosci_walca(){
     scanf("%f", &h);
     printf("Objetosc walca wynosi: %f", obl_obj_walca(r, h));
 }
-
+void menu(){
+    printf("Wybierz operacje\n1-Obliczenie Objetosci Prostopadloscianu\n2-Obliczenie Objetosci Walca\n");
+    scanf("%d", &load);
+    switch(load){
+    case 1:
+        Obliczanie_objetosci_prostopadloscianu();
+        break;
+    case 2:
+        Obliczanie_objetosci_walca();
+        break;
+    default:
+        printf("Wprowadzono niepoprawna wartosc\n");
+        break;
+    }
+}
 int main(){
-    Obliczanie_objetosci_prostopadloscianu();
-    Obliczanie_objetosci_walca();
+    menu();
     return 0;
 }
